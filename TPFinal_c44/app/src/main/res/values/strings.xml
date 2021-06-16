@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TP-Final</string>
+    <string name="jeu_name">Le jeu des 97 cartes</string>
+    <string name="demarer">Démarrer une nouvelle partie</string>
+    <string name="quitter">Quitter</string>
+    <string name="conclu">Partie terminé! \n Vous avez obtenu \nun score de:</string>
+</resources>

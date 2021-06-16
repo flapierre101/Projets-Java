@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+           <KeyPosition
+               motion:motionTarget="@+id/card_view"
+               motion:framePosition="50"
+               motion:keyPositionType="deltaRelative"
+               motion:percentX="50"
+               motion:percentY="50" />
+       </KeyFrameSet>
+        <OnSwipe motion:dragDirection="dragRight" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/card_view"
+            android:elevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/card_view2"
+            android:elevation="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:scaleX="0.5"
+            android:scaleY="0.5" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/card_view2"
+            android:elevation="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/card_view"
+            android:elevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:translationX="450dp" />
+    </ConstraintSet>
+</MotionScene>
